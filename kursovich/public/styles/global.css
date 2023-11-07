@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  block-size: 100svh;
+  inline-size: 100%;
+  margin: 0 auto;
+  padding-inline: var(--padding-inline-main);
+  padding-block: var(--padding-block-main);
+  font-family: 'Exo2';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+img {
+  display: inline-block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+picture {
+  margin: 0;
+  padding: 0;
+}
+
+button,
+a {
+  color: currentColor;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
