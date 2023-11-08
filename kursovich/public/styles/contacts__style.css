@@ -1,0 +1,31 @@
+.main {
+  min-block-size: 80svh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.map {
+  inline-size: 500px;
+  block-size: 500px;
+}
+
+.main__title {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.main__description {
+  font-size: 1.25rem;
+}
+
+.main__contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main__description-link:hover {
+  border: none;
+  outline: 2px #000 solid;
+}

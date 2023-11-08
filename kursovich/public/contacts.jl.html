@@ -10,7 +10,12 @@
     <link rel="icon" href="./img/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/header.css" />
-    <link rel="stylesheet" href="./styles/index__style.css" />
+    <link rel="stylesheet" href="./styles/contacts__style.css" />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=0ac7fadc-4a1e-4068-befc-a9ef245145bc
+    &lang=ru_RU"
+      type="text/javascript"
+    ></script>
     <title>psyduck</title>
   </head>
   <body class="page">
@@ -19,17 +24,15 @@
       <nav class="header__navigation">
         <ul class="header__navigation-list">
           <li class="header__navigation-list-item">
-            <a
-              href="./index.jl.html"
-              class="header__navigation-link header__link-active"
+            <a href="./index.jl.html" class="header__navigation-link"
               >Каталог</a
             >
           </li>
           <li class="header__navigation-list-item">
             <a href="#0" class="header__navigation-link">Оплата и доставка</a>
           </li>
-          <li class="header__navigation-list-item">
-            <a href="./contacts.jl.html" 0 class="header__navigation-link"
+          <li class="header__navigation-list-item header__link-active">
+            <a href="contacts.jl.html" 0 class="header__navigation-link"
               >Контакты</a
             >
           </li>
@@ -60,29 +63,35 @@
       </nav>
     </header>
     <main class="main">
-      <section class="main__cover">
-        <h2 class="main__cover-title">Канцтовары для вашего офиса!</h2>
-        <p class="main__cover-description">
-          Письменные принадлежности, товары для творчества и много другое
-        </p>
-      </section>
-      <section class="main__catalogue">
-        <ul class="main__catalogue-list"></ul>
-      </section>
+      <div id="map" class="map"></div>
+      <ul class="main__contact-list">
+        <li class="main__contact-item">
+          <h2 class="main__title">Вы можете найти нас:</h2>
+        </li>
+        <li class="main__contact-item">
+          <p class="main__description">
+            Адрес: Московская область, город Домодедово, мкр. Южный, улица
+            Курыжова, 19к1
+          </p>
+        </li>
+        <li class="main__contact-item">
+          <a
+            href="mailto:mail@example.com"
+            class="main__description main__description-link"
+          >
+            bebravadidas@ya.ru
+          </a>
+        </li>
+        <li class="main__contact-item">
+          <a
+            href="tel:+70000000"
+            class="main__description main__description-link"
+          >
+            +79096891891
+          </a>
+        </li>
+      </ul>
     </main>
-    <template class="main__catalogue-list-item-template">
-      <li class="main__catalogue-list-item">
-        <a href="#0" class="main__catalogue-list-link">
-          <article class="main__catalogue-list-card">
-            <img src="" alt="" class="main__catalogue-product-image" />
-            <div class="main__catalogue-list-card-container">
-              <h3 class="main__catalogue-list-card-title"></h3>
-              <p class="main__catalogue-list-card-description"></p>
-            </div>
-          </article>
-        </a>
-      </li>
-    </template>
-    <script src="./js/script.js"></script>
+    <script src="./js/map.js"></script>
   </body>
 </html>

@@ -8,7 +8,7 @@ body {
   block-size: 100svh;
   inline-size: 100%;
   margin: 0 auto;
-  font-family: 'Exo2';
+  font-family: 'Exo2', sans-serif;
 }
 
 h1,
@@ -43,4 +43,8 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+a {
+  text-decoration: none;
 }
