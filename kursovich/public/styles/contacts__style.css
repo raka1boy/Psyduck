@@ -28,4 +28,5 @@
 .main__description-link:hover {
   border: none;
   outline: 2px #000 solid;
+  outline-offset: 5px;
 }

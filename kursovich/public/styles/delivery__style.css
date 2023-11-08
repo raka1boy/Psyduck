@@ -1,0 +1,16 @@
+.main {
+  max-block-size: 100svh;
+  padding-block-start: var(--padding-block-main);
+}
+
+.main,
+.main__container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-inline: var(--padding-inline-main);
+}
+
+.main__title {
+  font-weight: 700;
+}

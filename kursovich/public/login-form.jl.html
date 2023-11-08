@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="icon" href="./img/favicon.ico" sizes="any" />
+    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles/login-form__style.css" />
+    <title>Войти</title>
+  </head>
+  <body class="page">
+    <main class="main">
+      <h1 class="main__title">psyduck</h1>
+      <form action="" autocomplete="off" class="enter-form">
+        <label for="email" class="email enter-form-text">Почта</label>
+        <input
+          type="text"
+          placeholder="me@example.com"
+          id="email"
+          name="email"
+          autocomplete="email"
+        />
+        <label for="password" class="password enter-form-text">Пароль</label>
+        <input
+          type="password"
+          placeholder="Пароль"
+          id="password"
+          name="password"
+        />
+        <label for="authorized" class="agree enter-form-text">
+          <input type="checkbox" id="authorized" name="authorized" /> Запомнить
+          меня
+        </label>
+        <button type="submit" class="loginbutton">Войти</button>
+      </form>
+    </main>
+  </body>
+</html>
