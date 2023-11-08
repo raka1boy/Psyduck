@@ -8,8 +8,6 @@ body {
   block-size: 100svh;
   inline-size: 100%;
   margin: 0 auto;
-  padding-inline: var(--padding-inline-main);
-  padding-block: var(--padding-block-main);
   font-family: 'Exo2';
 }
 
@@ -20,7 +18,6 @@ h4,
 h5,
 h6,
 p {
-  font-size: 1.125rem;
   font-weight: 500;
   margin: 0;
 }
