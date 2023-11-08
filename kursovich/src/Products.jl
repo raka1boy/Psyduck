@@ -1,6 +1,6 @@
 module Products
     using Kursovich.DB
-
+    
 
     template() = begin
         """<template class="main__catalogue-list-item-template">
