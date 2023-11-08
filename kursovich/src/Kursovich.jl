@@ -1,7 +1,8 @@
 module Kursovich
 
 using Genie
-
+include("Db.jl")
+include("Products.jl")
 const up = Genie.up
 export up
 
