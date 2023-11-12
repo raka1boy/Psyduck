@@ -30,11 +30,3 @@
   outline: 2px #000 solid;
   outline-offset: 5px;
 }
-
-.block {
-  background-color: aquamarine;
-  margin: 0;
-  posotion: absolute;
-  right: 0;
-  top: 0;
-}
