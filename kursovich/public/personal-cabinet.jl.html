@@ -10,8 +10,8 @@
     <link rel="icon" href="./img/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/header.css" />
-    <link rel="stylesheet" href="./styles/index__style.css" />
-    <title>psyduck</title>
+    <link rel="stylesheet" href="./styles/personal-cabinet__style.css" />
+    <title>Личный кабинет</title>
   </head>
   <body class="page">
     <header class="header">
@@ -19,14 +19,14 @@
       <nav class="header__navigation">
         <ul class="header__navigation-list">
           <li class="header__navigation-list-item">
-            <a
-              href="./index.jl.html"
-              class="header__navigation-link header__link-active"
+            <a href="./index.jl.html" class="header__navigation-link"
               >Каталог</a
             >
           </li>
           <li class="header__navigation-list-item">
-            <a href="./delivery.jl.html" class="header__navigation-link">Оплата и доставка</a>
+            <a href="./delivery.jl.html" class="header__navigation-link"
+              >Оплата и доставка</a
+            >
           </li>
           <li class="header__navigation-list-item">
             <a href="./contacts.jl.html" 0 class="header__navigation-link"
@@ -60,43 +60,7 @@
       </nav>
     </header>
     <main class="main">
-      <section class="main__cover">
-        <h2 class="main__cover-title">Канцтовары для вашего офиса!</h2>
-        <p class="main__cover-description">
-          Письменные принадлежности, товары для творчества и много другое
-        </p>
-      </section>
-      <section class="main__catalogue">
-        <ul class="main__catalogue-list">
-          <% @foreach(products) do product %>
-          <li class="main__catalogue-list-item">
-            <a href="products/$(product.id)" class="main__catalogue-list-link">
-              <article class="main__catalogue-list-card">
-                <img src="./img/" alt="" class="main__catalogue-product-image" />
-                <div class="main__catalogue-list-card-container">
-                  <h3 class="main__catalogue-list-card-title"></h3>
-                  <p class="main__catalogue-list-card-description"></p>
-                </div>
-              </article>
-            </a>
-          </li>
-        <% end %>
-        </ul>
-      </section>
     </main>
-    <template class="main__catalogue-list-item-template">
-      <li class="main__catalogue-list-item">
-        <a href="#0" class="main__catalogue-list-link">
-          <article class="main__catalogue-list-card">
-            <img src="" alt="" class="main__catalogue-product-image" />
-            <div class="main__catalogue-list-card-container">
-              <h3 class="main__catalogue-list-card-title"></h3>
-              <p class="main__catalogue-list-card-description"></p>
-            </div>
-          </article>
-        </a>
-      </li>
-    </template>
-    <script src="./js/script.js"></script>
+    <script src="./js/map.js"></script>
   </body>
 </html>
