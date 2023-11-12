@@ -60,6 +60,27 @@
       </nav>
     </header>
     <main class="main">
+      <section class="account-container">
+        <img
+          src="./img/template-avatar.png"
+          alt="Аватарка пользователя"
+          class="avatar"
+        />
+        <h2 class="account-nickname">Ivan Nadezhkin</h2>
+      </section>
+      <section class="orders">
+        <h2 class="orders__title">Мои заказы</h2>
+        <ul class="orders__list">
+
+        </ul>    
+      </section>
+      <template class="orders-template">
+        <li class="orders-list-item">
+          <p class="orders-list-item__order-number"></p>
+          <p class="orders-list-item__order-list"></p>
+          <p class="orders-list-item__order-data"></p>
+        </li>
+      </template>
     </main>
     <script src="./js/map.js"></script>
   </body>

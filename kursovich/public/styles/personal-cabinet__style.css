@@ -1,0 +1,22 @@
+.account-container {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+
+.avatar {
+  inline-size: 300px;
+  block-size: 300px;
+  border-radius: 50%;
+}
+
+.account-nickname {
+  font-size: 2.5rem;
+  align-self: center;
+}
+
+.orders-list-item {
+  display: flex;
+  flex-direction: row;
+  gap: 45px;
+}
