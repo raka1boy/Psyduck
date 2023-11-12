@@ -67,7 +67,21 @@
         </p>
       </section>
       <section class="main__catalogue">
-        <ul class="main__catalogue-list"></ul>
+        <ul class="main__catalogue-list">
+          <% @foreach(products) do product %>
+          <li class="main__catalogue-list-item">
+            <a href="#0" class="main__catalogue-list-link">
+              <article class="main__catalogue-list-card">
+                <img src="" alt="" class="main__catalogue-product-image" />
+                <div class="main__catalogue-list-card-container">
+                  <h3 class="main__catalogue-list-card-title"></h3>
+                  <p class="main__catalogue-list-card-description"></p>
+                </div>
+              </article>
+            </a>
+          </li>
+        <% end %>
+        </ul>
       </section>
     </main>
     <template class="main__catalogue-list-item-template">
