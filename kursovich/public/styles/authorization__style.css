@@ -2,6 +2,11 @@
   min-block-size: 100svh;
 }
 
+.link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .main,
 .enter-form {
   display: flex;
