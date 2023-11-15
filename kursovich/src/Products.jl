@@ -1,23 +1,6 @@
 module Products
     using Kursovich.DB
     
-
-    template() = begin
-        """<template class="main__catalogue-list-item-template">
-        <li class="main__catalogue-list-item">
-          <a href="#0" class="main__catalogue-list-link">
-            <article class="main__catalogue-list-card">
-              <img src="" alt="" class="main__catalogue-product-image" />
-              <div class="main__catalogue-list-card-container">
-                <h3 class="main__catalogue-list-card-title"></h3>
-                <p class="main__catalogue-list-card-description"></p>
-              </div>
-            </article>
-          </a>
-        </li>
-      </template>"""
-    end
-    
     Base.@kwdef struct Product
         id::Union{String,Integer} = "NULL"
         name::String
