@@ -1,0 +1,19 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.875rem, 0.3345rem + 6.5728vw, 6.25rem);
+  gap: 20px;
+}
+
+.button {
+  align-self: end;
+  cursor: pointer;
+  inline-size: 30%;
+  block-size: max(6svh, 20px);
+  background-color: transparent;
+}
+
+.button__text:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
