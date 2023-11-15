@@ -1,0 +1,34 @@
+product:
+    id:UInt
+    name:String
+    image_link:String
+    warehouse_id:UInt
+    description:String
+    price:money
+
+warehouse:
+    id:UInt
+    name:String
+    location:String
+
+user:
+    id:UInt
+    name:String
+    login::String
+    password::String
+    image_link:String
+
+order:
+    id:UInt
+    destination:UInt
+
+orders-products:
+    order_id:UInt
+    product_id:UInt
+    price:Float64
+
+
+
+lite 5 lvl fix
+func counting users beneath usersBeneathCount()
+skirts boost for norman xl
