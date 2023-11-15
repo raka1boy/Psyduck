@@ -15,6 +15,11 @@
   align-self: center;
 }
 
+.orders {
+  display: flex;
+  justify-content: center;
+}
+
 .orders-list-item {
   display: flex;
   flex-direction: row;
