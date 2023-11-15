@@ -3,6 +3,7 @@ module Kursovich
 using Genie
 include("Db.jl")
 include("Products.jl")
+include("Users.jl")
 const up = Genie.up
 export up
 
