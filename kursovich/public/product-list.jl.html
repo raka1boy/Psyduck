@@ -10,13 +10,8 @@
     <link rel="icon" href="./img/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/header.css" />
-    <link rel="stylesheet" href="./styles/contacts__style.css" />
-    <script
-      src="https://api-maps.yandex.ru/2.1/?apikey=0ac7fadc-4a1e-4068-befc-a9ef245145bc
-    &lang=ru_RU"
-      type="text/javascript"
-    ></script>
-    <title>Контакты</title>
+    <link rel="stylesheet" href="./styles/product-list__style.css" />
+    <title>Корзина</title>
   </head>
   <body class="page">
     <header class="header">
@@ -33,7 +28,7 @@
               >Оплата и доставка</a
             >
           </li>
-          <li class="header__navigation-list-item header__link-active">
+          <li class="header__navigation-list-item">
             <a href="./contacts.jl.html" 0 class="header__navigation-link"
               >Контакты</a
             >
@@ -57,36 +52,40 @@
         </a>
       </nav>
     </header>
-    <main class="main">
-      <div id="map" class="map"></div>
-      <ul class="main__contact-list">
-        <li class="main__contact-item">
-          <h2 class="main__title">Вы можете найти нас:</h2>
-        </li>
-        <li class="main__contact-item">
-          <p class="main__description">
-            Адрес: Московская область, город Домодедово, мкр. Южный, улица
-            Курыжова, 19к1
-          </p>
-        </li>
-        <li class="main__contact-item">
-          <a
-            href="mailto:mail@example.com"
-            class="main__description main__description-link"
-          >
-            bebravadidas@ya.ru
-          </a>
-        </li>
-        <li class="main__contact-item">
-          <a
-            href="tel:+70000000"
-            class="main__description main__description-link"
-          >
-            +79096891891
-          </a>
-        </li>
-      </ul>
-    </main>
-    <script src="./js/map.js"></script>
-  </body>
-</html>
+  <main class="main">
+    <section class="products">
+      <h2 class="products__title">Корзина</h2>
+      <ul class="products__list">
+
+      </ul>    
+    </section>
+    <template class="products-template">
+      <li class="products-list-item">
+        <p class="products-list-item__name"></p>
+        <p class="orders-list-item__price"></p>
+      </li>
+      <p class="total__price">Итого: </p>
+    </template>
+    <button
+      class="button open-dialog__button"
+      type="button"
+      onclick="window['dialog-id'].showModal()"
+      aria-controls="dialog-id"
+    >
+      <span class="button__text">Оформить заказ</span>
+    </button>
+  </main>
+  <dialog id="dialog-id" class="dialog">
+    <div class="dialog__description">
+      <p class="dialog__text">Заказ оформлен</p>
+    </div>
+    <form method="dialog">
+      <button
+        class="button close-dialog__button"
+        type="button"
+        onclick="window['dialog-id'].close()"
+      >
+        <span class="button__text">ОК</span>
+      </button>
+    </form>
+  </dialog>
