@@ -12,5 +12,6 @@
   gap: 8px;
   align-items: center;
   justify-content: center;
-  inline-size: 185px;
+  inline-size: 25%;
+  block-size: max(6svh, 20px);
 }
