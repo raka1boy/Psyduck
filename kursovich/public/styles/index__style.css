@@ -46,7 +46,7 @@
 .main__catalogue-list {
   display: grid;
   padding: clamp(0.4375rem, -0.502rem + 4.03vw, 3.125rem);
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   justify-content: center;
 }
 

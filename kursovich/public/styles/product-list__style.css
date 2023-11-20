@@ -15,3 +15,8 @@
   inline-size: 25%;
   block-size: max(6svh, 20px);
 }
+
+.close-dialog__button{
+  margin-block-start: 20px;
+  inline-size: 100%;
+}
