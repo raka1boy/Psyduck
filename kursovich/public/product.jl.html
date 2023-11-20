@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/product__style.css" />
-    <title>Товар</title>
+    <title>Psyduck : $(product.name)</title>
   </head>
   <body class="page">
     <header class="header">
@@ -36,6 +36,13 @@
         </ul>
       </nav>
       <nav class="header__navigation">
+        <a href="#0" class="header__navigation-link">
+          <img
+            src="./svg/search.svg"
+            alt="Значок поиска"
+            class="header__navigation-icon"
+          />
+        </a>
         <a href="./personal-cabinet.jl.html" class="header__navigation-link">
           <img
             src="./svg/personal-cabinet.svg"
@@ -53,9 +60,9 @@
       </nav>
     </header>
     <main class="main">
-        <img src="#" alt="Изображение товара" class="card__image">
+        <img src="$(product.name)" alt="Изображение товара" class="card__image">
         <div class="card__description">
-          <p class="card__description__text"> </p>
+          <p class="card__description__text">$(product.description) </p>
           <p class="card__description__price"> </p>
         </div>
         <button class="button button__add-to-cart" type="submit"> 
