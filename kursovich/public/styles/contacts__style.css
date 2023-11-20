@@ -25,6 +25,18 @@
   gap: 20px;
 }
 
+@media screen and (width <= 1024px) {
+  .main {
+    flex-direction: column;
+    flex-flow: wrap-reverse;
+    gap: 20px;
+  }  
+  .map {
+    inline-size: 250px;
+    block-size: 250px;
+  }
+}
+
 .main__description-link:hover {
   border: none;
   outline: 2px #000 solid;

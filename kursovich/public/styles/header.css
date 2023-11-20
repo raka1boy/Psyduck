@@ -12,6 +12,18 @@
   max-inline-size: 100%;
 }
 
+
+@media screen and (width <= 550px){
+  .header,
+  .header__navigation-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-inline-size: 100%;
+  }
+}
+
 .header__title {
   font-weight: 700;
   font-size: clamp(1.875rem, 1.7568rem + 0.5731vw, 3.125rem);
