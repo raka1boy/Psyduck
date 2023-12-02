@@ -9,11 +9,11 @@ route("/") do
   Html.html(page,products = products_result)
 end
 
-route("/products/:id") do 
-  product_id = payload(:id)
-  product_result = Products.get_product(product_id)
-  page = open(io->read(io, String),"./public/index.jl.html")
-  Html.html(page,product = product_result)
+route("/products/:id::Int") do 
+  product_result = Products.get_product(id)
+  @info product_result
+  page = open(io->read(io, String),"./public/product.jl.html")
+  Html.html(page)
 end
 
 route("signup") do 
