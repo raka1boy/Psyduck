@@ -1,4 +1,6 @@
 :root {
+  --main-text-color: #000;
+  --accent-text-color: #fff;
   --padding-inline-main: 4rem;
   --padding-block-main: 2.5rem;
 }

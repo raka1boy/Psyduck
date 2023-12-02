@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/product-list__style.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
     <title>Корзина</title>
   </head>
   <body class="page">
@@ -19,16 +20,16 @@
       <nav class="header__navigation">
         <ul class="header__navigation-list">
           <li class="header__navigation-list-item">
-            <a href="./index.jl.html" class="header__navigation-link"
+            <a
+              href="./index.jl.html"
+              class="link header__navigation-link"
               >Каталог</a
             >
           </li>
-          <li class="header__navigation-list-item">
-            <a href="./delivery.jl.html" class="header__navigation-link"
-              >Оплата и доставка</a
-            >
+          <li class="link header__navigation-list-item">
+            <a href="./delivery.jl.html" class="header__navigation-link">Оплата и доставка</a>
           </li>
-          <li class="header__navigation-list-item">
+          <li class="link header__navigation-list-item">
             <a href="./contacts.jl.html" 0 class="header__navigation-link"
               >Контакты</a
             >
@@ -52,13 +53,26 @@
         </a>
       </nav>
     </header>
-  <main class="main">
-    <section class="products">
-      <h2 class="products__title">Корзина</h2>
-      <ul class="products__list">
+    <main class="main">
+      <section class="products">
+        <h2 class="products__title">Корзина</h2>
+        <ul class="products__list">
 
-      </ul>    
-    </section>
+        </ul>    
+      </section>
+      <button
+        class="button open-dialog__button"
+        type="button"
+        onclick="window['dialog-id'].showModal()"
+        aria-controls="dialog-id"
+      >
+        <span class="button__text">Оформить заказ</span>
+      </button>
+    </main>
+    <footer class="footer">
+      <h2 class="footer__title">psyduck</h2>
+      <p class="footer__description">made by Nikita Kushnirov.</p>
+    </footer>
     <template class="products-template">
       <li class="products-list-item">
         <p class="products-list-item__name"></p>
@@ -66,26 +80,19 @@
       </li>
       <p class="total__price">Итого: </p>
     </template>
-    <button
-      class="button open-dialog__button"
-      type="button"
-      onclick="window['dialog-id'].showModal()"
-      aria-controls="dialog-id"
-    >
-      <span class="button__text">Оформить заказ</span>
-    </button>
-  </main>
-  <dialog id="dialog-id" class="dialog">
-    <div class="dialog__description">
-      <p class="dialog__text">Заказ оформлен</p>
-    </div>
-    <form method="dialog">
-      <button
-        class="button close-dialog__button"
-        type="button"
-        onclick="window['dialog-id'].close()"
-      >
-        <span class="button__text">ОК</span>
-      </button>
-    </form>
-  </dialog>
+    <dialog id="dialog-id" class="dialog">
+      <div class="dialog__description">
+        <p class="dialog__text">Заказ оформлен</p>
+      </div>
+      <form method="dialog">
+        <button
+          class="button close-dialog__button"
+          type="button"
+          onclick="window['dialog-id'].close()"
+        >
+          <span class="button__text">ОК</span>
+        </button>
+      </form>
+    </dialog>
+  </body>
+</html>

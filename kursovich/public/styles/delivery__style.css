@@ -1,5 +1,6 @@
 .main {
   max-block-size: 100svh;
+  block-size: 100svh;
   padding-block-start: var(--padding-block-main);
 }
 

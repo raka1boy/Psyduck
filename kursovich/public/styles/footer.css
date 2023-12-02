@@ -1,0 +1,19 @@
+.footer {
+  padding-inline: var(--padding-inline-main);
+  padding-block: var(--padding-block-main);
+  background-color: #eeeff7;
+  box-shadow: -2px -3px 5px #b8c5ff;
+  margin-block-start: 20px;
+}
+
+.footer__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: clamp(1.875rem, 1.7568rem + 0.5731vw, 3.125rem);
+  color: #D6AE01;
+}
+
+.footer__description {
+  margin-top: 15px;
+  text-align: center;
+}

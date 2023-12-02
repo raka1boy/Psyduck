@@ -1,7 +1,12 @@
+.main {
+  max-block-size: 100svh;
+  block-size: 100svh;
+}
 .account-container {
   display: flex;
   flex-direction: row;
   gap: 100px;
+  padding: 60px;
 }
 
 @media screen and (width <= 550px) {

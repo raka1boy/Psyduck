@@ -15,7 +15,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  color: #fff;
+  color: var(--accent-text-color);
 }
 
 .main,
@@ -46,7 +46,8 @@
 .main__catalogue-list {
   display: grid;
   padding: clamp(0.4375rem, -0.502rem + 4.03vw, 3.125rem);
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 3.125rem;
   justify-content: center;
 }
 
@@ -82,10 +83,4 @@
   cursor: pointer;
   inline-size: 100%;
   block-size: max(6svh, 20px);
-  background-color: transparent;
-}
-
-.button__text:hover {
-  text-decoration: underline;
-  text-underline-offset: 6px;
 }

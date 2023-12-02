@@ -25,3 +25,9 @@
 .enter-form-text {
   font-size: 1.35em;
 }
+
+.registerbutton,
+.loginbutton {
+  inline-size: 100%;
+  block-size: max(6svh, 20px);
+}

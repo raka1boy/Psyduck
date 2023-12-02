@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/index__style.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
     <title>psyduck</title>
   </head>
   <body class="page">
@@ -21,14 +22,14 @@
           <li class="header__navigation-list-item">
             <a
               href="#"
-              class="header__navigation-link header__link-active"
+              class="link header__navigation-link header__link-active"
               >Каталог</a
             >
           </li>
-          <li class="header__navigation-list-item">
+          <li class="link header__navigation-list-item">
             <a href="./delivery.jl.html" class="header__navigation-link">Оплата и доставка</a>
           </li>
-          <li class="header__navigation-list-item">
+          <li class="link header__navigation-list-item">
             <a href="./contacts.jl.html" 0 class="header__navigation-link"
               >Контакты</a
             >
@@ -77,10 +78,14 @@
               </article>
             </a>
           </li>
-        <% end %>
+          <% end %>
         </ul>
       </section>
     </main>
+    <footer class="footer">
+      <h2 class="footer__title">psyduck</h2>
+      <p class="footer__description">made by Nikita Kushnirov.</p>
+    </footer>
     <template class="main__catalogue-list-item-template">
       <li class="main__catalogue-list-item">
         <a href="#0" class="main__catalogue-list-link">

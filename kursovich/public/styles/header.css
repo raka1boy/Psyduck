@@ -1,6 +1,9 @@
 .header {
+  background-color: #eeeff7;
+  box-shadow: 2px 3px 5px #b8c5ff;
   padding-inline: var(--padding-inline-main);
   padding-block: var(--padding-block-main);
+  margin-bottom: 20px;
 }
 
 .header,
@@ -44,5 +47,20 @@
 }
 
 .header__link-active {
-  text-decoration: underline;
+  font-weight: 600;
+}
+
+.link::after {
+  content: "";
+  display: block;
+  inline-size: 100%;
+  block-size: 2px;
+  transform: scaleX(0);
+  background-color: var(--main-text-color);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
 }
