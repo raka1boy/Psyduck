@@ -10,7 +10,7 @@ route("/") do
 end
 
 route("/products/:id::Int") do 
-  product_result = Products.get_product(id)
+  product_result = Products.get_product(payload(:id))
   @info product_result
   page = open(io->read(io, String),"./public/product.jl.html")
   Html.html(page)
