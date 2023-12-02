@@ -67,6 +67,7 @@
   flex-direction: column;
   gap: 20px;
   max-inline-size: 230px;
+  max-block-size: 500px;
 }
 
 .main__catalogue-list-card-title {
