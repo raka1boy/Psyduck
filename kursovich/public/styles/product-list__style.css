@@ -13,11 +13,34 @@
   gap: 8px;
   align-items: center;
   justify-content: center;
-  inline-size: 25%;
-  block-size: max(6svh, 20px);
+  inline-size: 35%;
+  block-size: max(6svh, 25px);
+}
+
+.total__price {
+  text-align: center;
 }
 
 .close-dialog__button{
   margin-block-start: 20px;
   inline-size: 100%;
+}
+
+.products__title {
+  text-align: center;
+  margin-block-end: 20px;
+}
+
+.products__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border: 2px solid var(--main-text-color);
+  padding: 20px;
+}
+
+.products-list-item {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
 }
