@@ -21,3 +21,12 @@ route("signup") do
   page = open(io->read(io, String),"./public/signup-form.jl.html")
   Html.html(page)
 end
+
+route("/add_cart/:id::Int") do
+
+end
+
+route("/myprofile/:id::Int") do 
+  page = open(io->read(io, String),"./public/personal-cabinet.jl.html")
+  Html.html(page, user = Users.get_user(payload(:id)))
+end
