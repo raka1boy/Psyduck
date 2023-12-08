@@ -65,7 +65,13 @@
       <section class="orders">
         <h2 class="orders__title">Мои заказы</h2>
         <ul class="orders__list">
-
+          <%  for_each(orders) do order %>
+          <li class="orders-list-item">
+            <p class="orders-list-item__order-number">$(order.number)</p>
+            <p class="orders-list-item__order-list">$(order.listItems)</p>
+            <p class="orders-list-item__order-data">$(order.data)</p>
+          </li>
+          <% end %>
         </ul>    
       </section>
 

@@ -57,8 +57,13 @@
       <section class="products">
         <h2 class="products__title">Корзина</h2>
         <ul class="products__list">
-
-          <p class="total__price">Итого: </p>
+          <%  for_each(products) do product %>
+          <li class="products-list-item">
+            <p class="products-list-item__name">$(product.name)</p>
+            <p class="orders-list-item__price">$(product.price)</p>
+          </li>
+          <% end %>
+          <p class="total__price">Итого: $(totallyPrice)</p>
         </ul>    
       </section>
       <button
