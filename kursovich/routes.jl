@@ -1,8 +1,9 @@
 using Genie.Router, Genie.Requests
 using Genie.Renderer, Genie.Renderer.Html
 using Kursovich.Products
+using Kursovich.Users
 using HTTP.Cookies
-
+using HTTP
 function prs(data)
   data = split(replace(data, r" " => ""), ';')
   dicts = []
@@ -27,25 +28,50 @@ route("/products/:id::Int") do
   Html.html(page)
 end
 
-route("signup") do 
+route("signup") do
   page = open(io->read(io, String),"./public/signup-form.jl.html")
   Html.html(page)
 end
 
-route("reg") do 
+route("login") do
+  page = open(io->read(io, String),"./public/login-form.jl.html") 
+  Html.html(page)
+end
+route("reg") do
+  values = payload(:GET)
+  Users.create_user(Users.User("NULL",values[:name],"default.png",values[:email],values[:password]))
+  addcookie!(params(:REQUEST),Cookies.Cookie(name = "user_name",  value = values[:name]))
+  addcookie!(params(:REQUEST),Cookies.Cookie(name = "user_image_link", value ="default.png"))
+  addcookie!(params(:REQUEST),Cookies.Cookie(name = "user_login", value = values[:email]))
+  addcookie!(params(:REQUEST),Cookies.Cookie(name = "user_password", value = values[:password]))
+end
+
+route("log") do
+  values = payload(:GET)
+  @info values
+  values = Users.login_user(values[:email],values[:password])
+  addcookie!(params(:REQUEST),Cookies.Cookie(name = "user_name", value = values.name, maxage = 0))
+  addcookie!(params(:REQUEST),Cookies.Cookie(name = "user_image_link", value = values.image_link, maxage = 0))
+  addcookie!(params(:REQUEST),Cookies.Cookie(name = "user_login", value = values.login, maxage = 0))
+  addcookie!(params(:REQUEST),Cookies.Cookie(name = "user_password", value = values.password, maxage = 0))
   
 end
 
-route("test") do 
-  addcookie!(params(:REQUEST),Cookies.Cookie(name = "user", value =321))
-  Html.html(params(:REQUEST)["Cookie"] |> prs)
-end
 route("/add_cart/:id::Int") do
-
+  values = payload(:GET)
+  addcookie!(params(:REQUEST),Cookies.Cookie(name = "user_name", value = values[:name], maxage = 0))
+  addcookie!(params(:REQUEST),Cookies.Cookie(name = "user_image_link", value = values[:image_link], maxage = 0))
+  addcookie!(params(:REQUEST),Cookies.Cookie(name = "user_login", value = values[:login], maxage = 0))
+  addcookie!(params(:REQUEST),Cookies.Cookie(name = "user_password", value = values[:password], maxage = 0))
 end
 
-route("/myprofile/:id::Int") do 
+route("/myprofile") do 
+  values = payload(:GET)
   page = open(io->read(io, String),"./public/personal-cabinet.jl.html")
-  Html.html(page, user = Users.get_user(payload(:id)))
+  addcookie!(params(:REQUEST),Cookies.Cookie(name = "user_name", value = values[:name], maxage = 0))
+  addcookie!(params(:REQUEST),Cookies.Cookie(name = "user_image_link", value = values[:image_link], maxage = 0))
+  addcookie!(params(:REQUEST),Cookies.Cookie(name = "user_login", value = values[:login], maxage = 0))
+  addcookie!(params(:REQUEST),Cookies.Cookie(name = "user_password", value = values[:password], maxage = 0))
+  Html.html(page, user = Users.get_user(payload(:id)) , )
 end
 

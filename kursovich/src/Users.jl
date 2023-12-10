@@ -4,7 +4,7 @@ module Users
     Base.@kwdef struct User
         id::Union{Integer,String} = "NULL"
         name::String
-        image_link::String = "default.png"
+        image_link:: String = "default.png"
         login::String
         password::String
     end
@@ -16,7 +16,16 @@ module Users
         )
     end
 
-    create_user(user::User)::nothing = begin
-        DB.execute_query("INSERT INTO users(id,name,image_link,login,password) values(NULL,'$(user.name)', 'img/$(user.image_link)', '$(user.login)', '$(user.password)')")
+    login_user(login,password) = begin
+        user = DB.execute_query("SELECT * FROM users WHERE login = '$(login)' AND password = '$(password)'")
+        return User(user.id[1],user.name[1],user.image_link[1],user.login[1],user.password[1])
+    end
+    create_user(user::User)::Symbol = begin
+        @info "INSERT INTO users(id,name,login,password,image_link) values(NULL,'$(user.name)', '$(user.login)', '$(user.password)', 'img/$(user.image_link)')"
+        if (DB.execute_query("SELECT * FROM users WHERE login = '$(user.login)'") |> size)[2] == 0 
+            return :erorr;
+        end
+        DB.execute_query("INSERT INTO users(id,name,login,password,image_link) values(NULL,'$(user.name)', '$(user.login)', '$(user.password)', 'img/$(user.image_link)')")
+        return :ok;
     end
 end
