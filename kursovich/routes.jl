@@ -57,6 +57,13 @@ route("log") do
   
 end
 
+route("cart") do 
+  values = payload(:GET)
+  addcookie!(params(:REQUEST),Cookies.Cookie(name = "user_name", value = values[:name], maxage = 0))
+  addcookie!(params(:REQUEST),Cookies.Cookie(name = "user_image_link", value = values[:image_link], maxage = 0))
+  addcookie!(params(:REQUEST),Cookies.Cookie(name = "user_login", value = values[:login], maxage = 0))
+  addcookie!(params(:REQUEST),Cookies.Cookie(name = "user_password", value = values[:password], maxage = 0))
+end
 route("/add_cart/:id::Int") do
   values = payload(:GET)
   addcookie!(params(:REQUEST),Cookies.Cookie(name = "user_name", value = values[:name], maxage = 0))
